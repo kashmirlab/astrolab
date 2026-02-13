@@ -3,12 +3,13 @@
   "entry": ["src/pages/**/*.astro"],
   "project": ["src/**/*.{ts,tsx,astro,js,jsx}"],
   "ignore": ["**/*.test.ts", "**/*.spec.ts", "tests/**"],
-  "ignoreDependencies": ["@tailwindcss/typography", "tailwindcss", "@nanostores/persistent", "nanostores"],
+  "ignoreDependencies": [
+    "@tailwindcss/typography",
+    "tailwindcss",
+    "@nanostores/persistent",
+    "nanostores"
+  ],
   "astro": {
-    "entry": [
-      "astro.config.mjs",
-      "src/pages/**/*.astro",
-      "src/layouts/**/*.astro"
-    ]
+    "entry": ["astro.config.mjs", "src/pages/**/*.astro", "src/layouts/**/*.astro"]
   }
 }

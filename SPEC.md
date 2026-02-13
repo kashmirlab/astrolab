@@ -87,10 +87,7 @@ Class-based (`html.dark`). Lo script inline in `<head>` previene il flash:
 ```html
 <script is:inline>
   const theme = localStorage.getItem("theme");
-  if (
-    theme === '"dark"' ||
-    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
+  if (theme === '"dark"' || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
     document.documentElement.classList.add("dark");
   }
 </script>

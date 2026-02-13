@@ -72,18 +72,7 @@ export default {
     "type-enum": [
       2,
       "always",
-      [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "build",
-        "ci",
-        "chore",
-      ],
+      ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore"],
     ],
     "scope-enum": [1, "always", ["ui", "widgets", "content", "config", "deps"]],
     "subject-case": [2, "never", ["upper-case"]],
@@ -103,20 +92,12 @@ Esempi: `feat(ui): add dark mode toggle`, `fix(widgets): mobile menu close on na
 ```json
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": [
-    "src/pages/**/*.astro",
-    "src/content/config.ts",
-    "astro.config.mjs"
-  ],
+  "entry": ["src/pages/**/*.astro", "src/content/config.ts", "astro.config.mjs"],
   "project": ["src/**/*.{ts,tsx,astro,js,jsx}"],
   "ignore": ["**/*.test.ts", "**/*.spec.ts", "tests/**"],
   "ignoreDependencies": ["@astrojs/check", "typescript"],
   "astro": {
-    "entry": [
-      "astro.config.mjs",
-      "src/pages/**/*.astro",
-      "src/layouts/**/*.astro"
-    ]
+    "entry": ["astro.config.mjs", "src/pages/**/*.astro", "src/layouts/**/*.astro"]
   }
 }
 ```
@@ -280,10 +261,7 @@ Target: **WCAG 2.1 Level AA**.
     "yoavbls.pretty-ts-errors",
     "usernamehw.errorlens"
   ],
-  "unwantedRecommendations": [
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
-  ]
+  "unwantedRecommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
 }
 ```
 
