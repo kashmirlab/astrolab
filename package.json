@@ -8,7 +8,7 @@
     "check": "bunx --bun astro check",
     "deploy": "bunx wrangler deploy",
     "dev": "bunx --bun astro dev",
-    "format": "oxfmt --write 'src/**/*.{ts,tsx,js,jsx}'",
+    "format": "oxfmt --write .",
     "knip": "knip",
     "knip:fix": "knip --fix",
     "knip:prod": "knip --production",
