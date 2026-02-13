@@ -1,0 +1,14 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Button from '@components/ui/Button.astro';
+---
+
+<BaseLayout title="404 - Page Not Found">
+  <main class="flex min-h-screen flex-col items-center justify-center px-4">
+    <h1 class="text-6xl font-bold">404</h1>
+    <p class="mt-4 text-xl text-slate-600 dark:text-slate-400">Page not found.</p>
+    <div class="mt-8">
+      <Button href="/">Go Home</Button>
+    </div>
+  </main>
+</BaseLayout>

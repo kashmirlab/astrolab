@@ -1,0 +1,224 @@
+# ============================================================================
+# ASTRO & BUILD OUTPUT
+# ============================================================================
+# Astro build artifacts and runtime cache
+dist/
+*.tsbuildinfo
+.astro/
+.turbo/
+
+
+# ============================================================================
+# BUN PACKAGE MANAGER
+# ============================================================================
+# Bun lock file (should be committed, unlike npm's package-lock.json)
+# Keep bun.lock in version control for consistent installs
+# bun.lock - DO NOT IGNORE (tracking explicitly for clarity)
+
+# Bun-specific caches
+.bun/
+node_modules/
+node_modules.bak/
+
+
+# ============================================================================
+# NODE.JS & DEPENDENCIES
+# ============================================================================
+# Dependency directories (for both npm and other package managers)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+
+# Package manager lock files (Bun uses bun.lock)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+
+# ============================================================================
+# ENVIRONMENT & SECRETS
+# ============================================================================
+# Environment variables (CRITICAL - never commit secrets)
+.env
+.env.local
+.env.*.local
+.dev.vars
+.dev.vars.*
+.env.production.local
+.env.test.local
+
+# Cloudflare Wrangler local environment files
+.wrangler/
+wrangler.local.toml
+
+
+# ============================================================================
+# EDITOR & IDE
+# ============================================================================
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.vscode-test/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+.webstorm
+.iml
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim/Neovim
+.vim/
+.netrwhist
+*~
+
+# GNU Emacs
+*~
+.#*
+\#*\#
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+
+# ============================================================================
+# CLAUDE CODE (AI ASSISTANT)
+# ============================================================================
+# Claude Code workspace configuration (local settings)
+.claude/settings.local.json
+
+# Optional: Use .claudeignore for finer control over Claude's file access
+# .claudeignore
+
+
+# ============================================================================
+# DEVELOPMENT & BUILD TOOLS
+# ============================================================================
+# ESLint / Oxlint
+.eslintcache
+.oxlintcache
+
+# Prettier
+.prettierignore
+.prettierignore.local
+
+# TypeScript
+*.tsbuildinfo
+tsconfig.local.json
+
+# Code formatting (Oxfmt) - typically no local files
+
+# Knip (dead code detection)
+knip.local.json
+
+# Lefthook (git hooks)
+.lefthook-local.yml
+.lefthook.local.json
+
+# Lighthouse CI
+.lhci/
+.lighthouserc.local.json
+
+
+# ============================================================================
+# TESTING & CI/CD
+# ============================================================================
+# Test coverage
+coverage/
+.coverage/
+.nyc_output/
+
+# Vitest / Jest
+.vitest/
+.jest_cache/
+
+# Test artifacts
+*.test.log
+
+# Temporary CI/CD artifacts
+.github/workflows/*.log
+
+
+# ============================================================================
+# SYSTEM & TEMPORARY FILES
+# ============================================================================
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# Log files (various tools)
+*.log
+logs/
+
+
+# ============================================================================
+# BUILD & DEPLOYMENT
+# ============================================================================
+# Vercel
+.vercel/
+.vercel.local
+
+# Netlify
+.netlify/
+.netlify.local
+
+# Cloudflare Pages
+.cloudflare-pages/
+
+# Build previews
+out/
+preview/
+
+
+# ============================================================================
+# PROJECT-SPECIFIC (ASTRO + TAILWIND V4)
+# ============================================================================
+# Astro content collection generated files
+.astro/content/
+
+# Tailwind CSS generated files
+# Note: Tailwind v4 auto-respects .gitignore for content detection
+# so node_modules are already excluded from class detection
+
+# Static site generation
+_site/
+
+
+# ============================================================================
+# UNCOMMITTED/WIP
+# ============================================================================
+# Add patterns here for files in active development that shouldn't be committed
+# Example: *.wip, draft/, scratch/

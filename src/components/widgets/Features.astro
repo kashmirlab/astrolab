@@ -1,0 +1,40 @@
+---
+import Card from '@components/ui/Card.astro';
+
+const features = [
+  {
+    title: 'Astro 6',
+    description: 'Content Layer API, View Transitions, and Server Islands built-in.',
+  },
+  {
+    title: 'Tailwind v4',
+    description: 'CSS-first configuration with OKLCH colors and lightning-fast builds.',
+  },
+  {
+    title: 'OXC Suite',
+    description: '50-100x faster linting and formatting with oxlint and oxfmt.',
+  },
+  {
+    title: 'Bun Runtime',
+    description: 'Lightning-fast package manager and runtime for maximum speed.',
+  },
+  {
+    title: 'Nanostores',
+    description: 'Framework-agnostic state management in just 286 bytes.',
+  },
+  {
+    title: 'Cloudflare',
+    description: 'Optimized for edge deployment with global low-latency performance.',
+  },
+];
+---
+
+<section class="py-20">
+  <div class="mx-auto max-w-7xl px-4">
+    <h2 class="text-center text-3xl font-bold">Built with cutting-edge tech</h2>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {features.map((feature) => <Card title={feature.title} description={feature.description} />)}
+    </div>
+  </div>
+</section>

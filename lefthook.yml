@@ -1,0 +1,25 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: astro-check
+      glob: "*.astro"
+      run: bunx astro check --minimumSeverity warning {staged_files}
+    - name: oxlint
+      glob: "*.{js,jsx,ts,tsx,astro}"
+      run: bunx oxlint --fix {staged_files}
+    - name: oxfmt
+      glob: "*.{js,jsx,ts,tsx,astro}"
+      run: bunx oxfmt {staged_files}
+    - name: sort-package
+      glob: "package.json"
+      run: bunx sort-package-json {staged_files}
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: bunx commitlint --edit {1}
+
+pre-push:
+  jobs:
+    - name: knip
+      run: bunx knip --production

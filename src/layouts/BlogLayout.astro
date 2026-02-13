@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '@components/layout/Header.astro';
+import Footer from '@components/layout/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate?: Date;
+}
+
+const { title, description, pubDate } = Astro.props;
+---
+
+<BaseLayout title={title} {...(description !== undefined ? { description } : {})}>
+  <Header />
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <article>
+      <header class="mb-8">
+        {
+          pubDate && (
+            <time
+              datetime={pubDate.toISOString()}
+              class="text-sm text-slate-500 dark:text-slate-400"
+            >
+              {pubDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </time>
+          )
+        }
+        <h1 class="mt-2 text-4xl font-bold md:text-5xl">{title}</h1>
+      </header>
+
+      <div class="prose max-w-none dark:prose-invert">
+        <slot />
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>

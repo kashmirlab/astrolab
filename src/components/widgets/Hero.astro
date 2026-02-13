@@ -1,0 +1,30 @@
+---
+import Button from '@components/ui/Button.astro';
+---
+
+<section class="py-20">
+  <div class="mx-auto max-w-7xl px-4 text-center">
+    <h1
+      class="text-balance text-5xl font-bold tracking-tight md:text-6xl"
+      transition:name="hero"
+      transition:animate="slide"
+    >
+      Build faster with
+      <span class="text-brand-500">modern tools</span>
+    </h1>
+
+    <p class="mx-auto mt-6 max-w-2xl text-balance text-xl text-slate-600 dark:text-slate-400">
+      A production-ready Astro template with Tailwind v4, OXC, Bun, and Nanostores. Deploy to
+      Cloudflare in seconds.
+    </p>
+
+    <div class="mt-10 flex items-center justify-center gap-4">
+      <Button variant="primary" size="lg" href="/blog">
+        Get Started
+      </Button>
+      <Button variant="secondary" size="lg" href="https://docs.astro.build">
+        Documentation
+      </Button>
+    </div>
+  </div>
+</section>

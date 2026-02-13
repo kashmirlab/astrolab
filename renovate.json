@@ -1,0 +1,37 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "schedule": ["every weekend"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "description": "Auto-merge patch/minor",
+      "matchUpdateTypes": ["patch", "minor", "digest"],
+      "automerge": true,
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Manual review major",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "minimumReleaseAge": "7 days"
+    },
+    { "matchPackageNames": ["@astrojs/**"], "groupName": "Astro" },
+    {
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/**"],
+      "groupName": "Tailwind CSS"
+    },
+    {
+      "matchPackageNames": ["nanostores", "@nanostores/**"],
+      "groupName": "Nanostores"
+    },
+    {
+      "matchPackageNames": ["oxlint", "oxfmt", "lefthook"],
+      "groupName": "Dev tools"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 3am on monday"]
+  }
+}

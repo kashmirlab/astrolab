@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Theme tokens */
+@theme {
+  /* Brand colors (oklch for perceptual uniformity) */
+  --color-brand-50: oklch(0.95 0.02 260);
+  --color-brand-100: oklch(0.9 0.04 260);
+  --color-brand-200: oklch(0.85 0.06 260);
+  --color-brand-300: oklch(0.75 0.1 260);
+  --color-brand-400: oklch(0.7 0.12 260);
+  --color-brand-500: oklch(0.65 0.15 260);
+  --color-brand-600: oklch(0.55 0.15 260);
+  --color-brand-700: oklch(0.45 0.13 260);
+  --color-brand-800: oklch(0.35 0.11 260);
+  --color-brand-900: oklch(0.25 0.1 260);
+
+  /* Custom breakpoints */
+  --breakpoint-3xl: 120rem;
+}
+
+/* Plugins */
+@plugin "@tailwindcss/typography";
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Dark mode transitions */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
