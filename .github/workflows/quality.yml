@@ -25,9 +25,4 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install --frozen-lockfile
       - run: bun run build
-      - uses: treosh/lighthouse-ci-action@v12
-        with:
-          configPath: "./lighthouserc.json"
-          budgetPath: "./budget.json"
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+      - run: bun run lhci
